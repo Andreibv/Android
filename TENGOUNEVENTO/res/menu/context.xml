@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Pacientes" >
+     <item
+        android:id="@+id/ver"
+        android:title="@string/ver"
+        android:orderInCategory="100"
+        android:showAsAction="never" />  
+ 	
+  	 <item
+        android:id="@+id/eliminar"
+        android:title="@string/eliminar"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
+ 
+</menu>
+

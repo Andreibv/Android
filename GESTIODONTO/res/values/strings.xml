@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Gesti-Odonto</string>
+    <string name="title_registro">Registro</string>
+    <string name="title_pacientes">Pacientes</string>
+    <string name="title_turno">Turno</string>
+    <string name="title_tratamiento">Tratamientos</string>
+    <string name="title_catedras">Catedras</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Configuraciones</string>
+    <string name="title_activity_registro">Registro</string>
+    <string name="registro">Tab Registro!</string>
+    <string name="pacientes">Pacientes</string>
+    <string name="hello_world">Bienvenido (a)!</string>
+    <string name="title_activity_pacientes">Lista de Pacientes</string>
+    <string name="title_activity_turno">Turno</string>
+    <string name="title_activity_tratamiento">Tratamientos</string>
+    <string name="title_activity_catedras">Lista de Catedras</string>
+    <string name="ver">Ver</string>
+    <string name="editar">Editar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="title_activity_nuevo_paciente">Nuevo Paciente</string>
+    <string name="title_activity_ver_paciente">Ver Paciente</string>
+    <string name="title_activity_editar_paciente">Editar Paciente</string>
+    <string name="title_activity_nueva__catedra">Nueva Catedra</string>
+    <string name="title_activity_nuevo__tratamiento">Nuevo Tratamiento</string>
+    <string name="title_activity_nuevo_turno">Turnos</string>
+    <string name="title_activity_nuevo__turno">Nuevo Turno</string>
+    <string name="title_activity_nuevo__registro">Nuevo Registro</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_splash">Splash</string>
+
+</resources>

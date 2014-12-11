@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Tengo Un Evento</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Andrei Briceño DEV</string>
+    <string name="salir">Salir</string>
+    <string name="miseventos">MIS EVENTOS</string>
+    <string name="prod">PRODUCTOS</string>
+    <string name="detalles">Detalles</string>
+    <string name="title_activity_evento">Evento</string>
+    <string name="title_activity_nuevo__evento">Nuevo Evento</string>
+    <string name="ver">Ver detalles</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="editar">Editar</string>
+    <string name="title_activity_producto">Productos</string>
+    <string name="title_activity_prueba">Prueba</string>
+    <string name="title_activity_nuevo__producto">Nuevo_Producto</string>
+    <string name="get_back_eventos">Eventos</string>
+    <string name="salir_from_prod">Salir</string>
+    
+    
+
+</resources>

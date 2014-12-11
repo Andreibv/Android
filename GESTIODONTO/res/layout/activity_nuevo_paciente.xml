@@ -1,0 +1,130 @@
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.gestiodonto.Nuevo_paciente" >
+
+     <ScrollView 
+         android:layout_width="fill_parent" 
+         android:layout_height="wrap_content">
+     
+         
+           <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+               
+               <EditText
+        		android:id="@+id/cedula_crear"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_alignParentTop="true"
+        		android:layout_centerHorizontal="true"
+        		android:ems="10"
+        		android:hint="Cédula"
+        		android:inputType="textPersonName" >
+	
+    		    	<requestFocus />
+    			</EditText>
+    
+               
+               <EditText
+        		android:id="@+id/nombre_crear"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_alignLeft="@+id/cedula_crear"
+        		android:layout_below="@+id/cedula_crear"
+        		android:ems="10"
+        		android:inputType="textPersonName"
+        		android:hint="Nombre"  />
+	
+    		   <EditText
+        		android:id="@+id/apellido1_crear"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_alignLeft="@+id/nombre_crear"
+        		android:layout_below="@+id/nombre_crear"
+        		android:ems="10"
+        		android:inputType="textPersonName"
+        		android:hint="Apellido 1"  />
+
+    		   <EditText
+        		android:id="@+id/apellido2_crear"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_alignLeft="@+id/apellido1_crear"
+        		android:layout_below="@+id/apellido1_crear"
+        		android:ems="10"
+		        android:inputType="textPersonName"
+        		android:hint="Apellido 2" />
+
+    		   <EditText
+        		android:id="@+id/telefono_crear"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_alignLeft="@+id/apellido2_crear"
+        		android:layout_below="@+id/apellido2_crear"
+        		android:ems="10"
+        		android:inputType="textPersonName"
+        		android:hint="Telefono"/>
+	    
+    		   <EditText
+        		android:id="@+id/fechanac_crear"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+		        android:layout_alignLeft="@+id/telefono_crear"
+		        android:layout_below="@+id/telefono_crear"
+		        android:ems="10"
+		        android:hint="Fecha de Nacimiento dd/mm/yyyy "
+		        android:inputType="phone" 
+		        android:digits="1234567890/" />
+		
+    		   <EditText
+        		android:id="@+id/expediente_crear"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_alignLeft="@+id/fechanac_crear"
+        		android:layout_below="@+id/fechanac_crear"
+        		android:ems="10"
+        		android:inputType="textPersonName"
+        		android:hint="Expediente" />
+	    
+    		   <EditText
+        		android:id="@+id/direccion_crear"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_alignLeft="@+id/expediente_crear"
+        		android:layout_below="@+id/expediente_crear"
+        		android:ems="10"
+		        android:inputType="textMultiLine"
+         		android:hint="Dirección"  />
+
+		       <Button
+		           android:id="@+id/crear_Paciente_btn"
+		           style="@style/TextAppearance.AppCompat.Widget.PopupMenu.Large"
+		           android:layout_width="wrap_content"
+		           android:layout_height="wrap_content"
+		           android:background="@android:color/transparent"
+		           android:text="Crear" />
+
+		       <Button
+		           android:id="@+id/cancel_new_paciente"
+		           style="?android:attr/buttonStyleSmall"
+		           android:layout_width="wrap_content"
+		           android:layout_height="wrap_content"
+		           android:text="Cancelar" />
+	
+        </TableLayout>
+        
+ 	</ScrollView>
+    
+  
+
+</RelativeLayout>

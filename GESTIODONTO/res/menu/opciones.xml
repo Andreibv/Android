@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+  <item
+        android:id="@+id/pacientes"
+        android:orderInCategory="100"
+        android:title="@string/title_pacientes"
+        android:showAsAction="never"/>
+  <item
+        android:id="@+id/tratamiento"
+        android:orderInCategory="100"
+        android:title="@string/title_tratamiento"
+        android:showAsAction="never"/>
+  
+  <item
+        android:id="@+id/turno"
+        android:orderInCategory="100"
+        android:title="@string/title_turno"
+        android:showAsAction="never"/>
+    
+  <item
+        android:id="@+id/registro"
+        android:orderInCategory="100"
+        android:title="@string/title_registro"
+        android:showAsAction="never"/>
+       
+  <item
+        android:id="@+id/catedras"
+        android:orderInCategory="100"
+        android:title="@string/title_catedras"
+        android:showAsAction="never"/>
+    
+</menu>

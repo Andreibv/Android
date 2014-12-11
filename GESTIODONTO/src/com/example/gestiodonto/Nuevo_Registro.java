@@ -1,0 +1,174 @@
+package com.example.gestiodonto;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Random;
+
+import android.support.v7.app.ActionBarActivity;
+import android.text.format.DateFormat;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListAdapter;
+import android.widget.Spinner;
+import android.widget.SpinnerAdapter;
+import android.widget.AdapterView.OnItemSelectedListener;
+
+public class Nuevo_Registro extends ActionBarActivity {
+	BD bd=new BD(this);
+	ListAdapter adaptadorPacientes,adaptadorTurno,adaptadorTratamiento;
+	 Spinner spinnerPaciente,spinnerTurno,spinnerTratamiento;
+	 String paciente,turno,tratamiento;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_nuevo__registro);
+		  spinnerPaciente = (Spinner) findViewById(R.id.spinnerRegPaciente);
+		  spinnerTurno = (Spinner) findViewById(R.id.spinnerRegTurno);
+		  spinnerTratamiento = (Spinner) findViewById(R.id.spinnerRegTratamiento);
+		 
+		  adaptadorPacientes = new ArrayAdapter<Pacientes>(
+				 this, android.R.layout.simple_spinner_dropdown_item, bd.getAllPacientes());
+		  adaptadorTurno = new ArrayAdapter<Turno>(
+					 this, android.R.layout.simple_spinner_dropdown_item, bd.getAllTurnos());
+		  adaptadorTratamiento = new ArrayAdapter<Tratamiento>(
+					 this, android.R.layout.simple_spinner_dropdown_item, bd.getAllTratamientos());
+		  
+		  spinnerPaciente.setAdapter((SpinnerAdapter) adaptadorPacientes);
+		  spinnerTurno.setAdapter((SpinnerAdapter) adaptadorTurno);
+		  spinnerTratamiento.setAdapter((SpinnerAdapter) adaptadorTratamiento);
+		  
+		  spinnerPaciente.setOnItemSelectedListener( new OnItemSelectedListener(){
+
+				@Override
+				public void onItemSelected(AdapterView<?> parent, View view,
+						int position, long id) {
+					// TODO Auto-generated method stub
+					paciente= spinnerPaciente.getSelectedItem().toString();
+				
+				}
+
+				@Override
+				public void onNothingSelected(AdapterView<?> parent) {
+					// TODO Auto-generated method stub
+					
+				}
+				
+			});
+		  
+		  spinnerTurno.setOnItemSelectedListener( new OnItemSelectedListener(){
+
+				@Override
+				public void onItemSelected(AdapterView<?> parent, View view,
+						int position, long id) {
+					// TODO Auto-generated method stub
+					turno= spinnerTurno.getSelectedItem().toString();
+				
+				}
+
+				@Override
+				public void onNothingSelected(AdapterView<?> parent) {
+					// TODO Auto-generated method stub
+					
+				}
+				
+			});
+		
+		  
+		  spinnerTratamiento.setOnItemSelectedListener( new OnItemSelectedListener(){
+
+				@Override
+				public void onItemSelected(AdapterView<?> parent, View view,
+						int position, long id) {
+					// TODO Auto-generated method stub
+					tratamiento= spinnerTratamiento.getSelectedItem().toString();
+				
+				}
+
+				@Override
+				public void onNothingSelected(AdapterView<?> parent) {
+					// TODO Auto-generated method stub
+					
+				}
+				
+			});
+		  
+		  
+		  Button nuevo_Tra = (Button) findViewById(R.id.crear_Registro_btn);
+		     nuevo_Tra.setOnClickListener(new View.OnClickListener() {
+		    		
+		    		
+					@Override
+					public void onClick(View v) {
+						Random rnd = new Random();
+						
+						SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+						Date date = new Date(); 
+						bd.addRegistro(rnd.nextInt(), paciente, turno, tratamiento, dateFormat.format(date).toString());
+						//bd.addCatedra(rnd.nextInt(),nom.toString());
+						Intent intent = new Intent(getBaseContext(),Registro.class);
+			        	startActivity(intent);
+									
+					}
+				});
+			     
+			     Button cancel_Cat = (Button) findViewById(R.id.cancel_new_registro);
+			     cancel_Cat.setOnClickListener(new View.OnClickListener() {
+					
+					@Override
+					public void onClick(View v) {
+						Intent intent = new Intent(v.getContext(),Registro.class);
+						 startActivity(intent);
+						
+					}
+				});
+		 
+		 
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.opciones, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+		int id = item.getItemId();
+		 Intent intent;
+		switch(id)
+		{
+		case R.id.pacientes:
+			 intent = new Intent(this,Pacientes.class);
+			 startActivity(intent);
+			//Toast.makeText(getApplicationContext(), "Si sirve", Toast.LENGTH_LONG).show();
+			return super.onOptionsItemSelected(item);	
+		case R.id.registro:
+			 intent = new Intent(this,Registro.class);
+			 startActivity(intent);
+			return super.onOptionsItemSelected(item);
+		case R.id.turno:
+			intent = new Intent(this,Turno.class);
+			 startActivity(intent);
+			return super.onOptionsItemSelected(item);
+		case R.id.tratamiento:
+			intent = new Intent(this,Tratamiento.class);
+			 startActivity(intent);
+			return super.onOptionsItemSelected(item);
+		case R.id.catedras:
+			 intent = new Intent(this,Catedras.class);
+			 startActivity(intent);
+			return super.onOptionsItemSelected(item);
+		}
+		return super.onOptionsItemSelected(item);
+	}
+}
